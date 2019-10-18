@@ -18,7 +18,7 @@ body{
 }
 
 header{
-    background-image: url(img/pizza1.jpg);
+    background-image: url(../img/pizza1.jpg);
     
 }
 #contenedor{
@@ -36,7 +36,7 @@ h3{
 #formulario{
     border: 4px white solid;
     background-color: white;
-    background-image: url(img/pizza.jpg);
+    background-image: url(../img/pizza.jpg);
     
    
     
