@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/validacion.js"></script>
+    <title>Web4Pizza</title>
+</head>
+
+<body>
+    <header>
+        <div id="titulo">WEB4PIZZA</div>
+    </header>
+    <div id="contenedor">
+
+        <h3>Web4Pizza es una nueva forma de comer pizza, en la que recibiras una pizza sorpresa ¡¡por un precio de 4€!!
+        </h3>
+        <div id="formulario">
+            <div id="recuadro">
+                <form onsubmit="return validar();">
+                    <h4>Datos del cliente y pedido</h4>
+                    Nombre:
+                    <input type="text" id="name" name="nombre" placeholder="Escribe tu nombre"><br />
+                    Apellidos:
+                    <input type="text" id="surname" name="apellidos" placeholder="Escribe tus apellidos"><br />
+                    E-mail:
+                    <input type="email" id="mail" name="correo" placeholder="ejemplo@campuscamara.es"><br />
+                    Telefono:
+                    <input type="tel" id="tlf" name="telefono" placeholder="Ej. 668899999"><br>
+                    Direccion:
+                    <input type="text" id="address" name="Direccion" placeholder="Escribe tu direccion completa"><br />
+                    Hora deseada de entrega:
+                    <input type="time" id="hour" name="hora" step="1800" min="12:00" max="24:00"><br />
+                    <h4>Datos de pago</h4>
+                    Numero de trajeta:
+                    <input id="numtarjeta" id="numtarjeta" name="tarjeta" type="text"
+                        placeholder="Ej. 5555-4444-3333-2222"><br />
+                    Nombre titular:
+                    <input type="text" id="nametarjeta" name="nombre" placeholder="Escribe tu nombre"><br />
+                    ------------------------------------------<br />
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar">
+                </form>
+
+            </div>
+        </div>
+        <footer>
+            Joaquin Bono Pineda 2019-2020
+        </footer>
+    </div>
+</body>
+
+</html>
