@@ -1,0 +1,75 @@
+*{
+    padding: 20px;
+
+    
+}
+
+body{
+    background-color:rgb(165, 12, 12);
+}
+
+#titulo{
+    color:white;
+    padding:10px;
+    font-size: 60px;
+    text-align: center;
+    
+    
+}
+
+header{
+    background-image: url(img/pizza1.jpg);
+    
+}
+#contenedor{
+    text-align: center;
+    
+    
+}
+
+h3{
+    border: 4px white dotted;
+    background-color:rgb(165, 12, 12);
+    color: white;
+}
+
+#formulario{
+    border: 4px white solid;
+    background-color: white;
+    background-image: url(img/pizza.jpg);
+    
+   
+    
+}
+
+#recuadro{
+    background-color:white;
+    border:5px solid;
+    margin: 190px;
+    font-size: 18px;
+    
+
+}
+h4{
+    border-bottom: 2px solid;
+}
+
+footer{
+    background-color:rgb(165, 12, 12);
+    color: white;
+    margin-top: 20px;
+}
+
+input, textarea {
+    padding : 0 10px;
+    margin  : 0;
+    width   : 240px;
+  
+    background: none;
+  }
+
+  input:focus, textarea:focus {
+    background   : rgba(0,0,0,.1);
+    border-radius: 5px;
+    outline      : none;
+  }
