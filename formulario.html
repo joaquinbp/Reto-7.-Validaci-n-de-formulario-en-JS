@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="js/validacion.js"></script>
     <title>Web4Pizza</title>
 </head>
 
@@ -20,29 +19,53 @@
         </h3>
         <div id="formulario">
             <div id="recuadro">
-                <form onsubmit="return validar();">
+                <form id="form" onsubmit="return validar()">
                     <h4>Datos del cliente y pedido</h4>
-                    Nombre:
-                    <input type="text" id="name" name="nombre" placeholder="Escribe tu nombre"><br />
-                    Apellidos:
-                    <input type="text" id="surname" name="apellidos" placeholder="Escribe tus apellidos"><br />
-                    E-mail:
-                    <input type="email" id="mail" name="correo" placeholder="ejemplo@campuscamara.es"><br />
+                    <label>
+                    <span>Nombre:</span>
+                    <input type="text"   id="name" name="nombre" placeholder="Escribe tu nombre" onblur="valida_Nombre()"><br />
+                    <div id="errorNom"></div>
+                    </label>
+                    <label>
+                    <span>Apellidos:</span>
+                    <input type="text"  id="surname" name="apellidos" placeholder="Escribe tus apellidos" onblur="valida_Apellidos()"><br />
+                    <div id="errorApe"></div>
+                </label>
+                <label>
+                    <span>E-mail:</span>
+                    <input type="email" id="mail" name="correo" placeholder="ejemplo@campuscamara.es"  onblur="valida_Email()"><br />
+                    <div id="errorMail"></div>
+                </label>
+                <label>
                     Telefono:
-                    <input type="tel" id="tlf" name="telefono" placeholder="Ej. 668899999"><br>
+                    <input type="tel" id="tlf" name="telefono" placeholder="Ej. 668899999" onblur="valida_Telefono()"><br>
+                    <div id="errorTlf"></div>
+                </label>
+                <label>
                     Direccion:
-                    <input type="text" id="address" name="Direccion" placeholder="Escribe tu direccion completa"><br />
+                    <input type="text" id="address" name="Direccion" placeholder="Escribe tu direccion completa" onblur="valida_Direccion()"><br />
+                    <div id="errorDir"></div>
+                </label>
+                <label>
                     Hora deseada de entrega:
-                    <input type="time" id="hour" name="hora" step="1800" min="12:00" max="24:00"><br />
+                    <input type="time" id="hour" name="hora" step="1800" min="12:00" max="24:00" placeholder="Hora de entrega" onblur="valida_Hora()"><br />
+                    <div id="errorHora"></div>
+                </label>
                     <h4>Datos de pago</h4>
+                    <label>
                     Numero de trajeta:
                     <input id="numtarjeta" id="numtarjeta" name="tarjeta" type="text"
-                        placeholder="Ej. 5555-4444-3333-2222"><br />
+                        placeholder="Ej. 5555-4444-3333-2222" onblur="valida_Tarjeta()"><br />
+                        <div id="errorTarj"></div>
+                    </label>
+                    <label>
                     Nombre titular:
-                    <input type="text" id="nametarjeta" name="nombre" placeholder="Escribe tu nombre"><br />
+                    <input type="text" id="nametarjeta" name="nombre" placeholder="Escribe tu nombre" onblur="valida_NomTarjeta()" ><br />
+                    <div id="errorNomTarj"></div>
+                </label>
                     ------------------------------------------<br />
-                    <input type="submit" value="Enviar">
-                    <input type="reset" value="Borrar">
+                    <input type="submit" name="submit" value="Enviar">
+                    <input type="reset" name ="borrar" value="Borrar" onclick="borrar()">
                 </form>
 
             </div>
@@ -51,6 +74,7 @@
             Joaquin Bono Pineda 2019-2020
         </footer>
     </div>
+    <script type="text/javascript" src="js/validacion.js"></script>
 </body>
 
 </html>

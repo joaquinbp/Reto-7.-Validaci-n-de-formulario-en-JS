@@ -61,9 +61,9 @@ footer{
 }
 
 input, textarea {
-    padding : 0 10px;
-    margin  : 0;
-    width   : 240px;
+    padding : 5px 10px;
+    margin  : 5px;
+    width   : auto;
   
     background: none;
   }
@@ -73,3 +73,25 @@ input, textarea {
     border-radius: 5px;
     outline      : none;
   }
+
+  /* Estos son los estilos para nuestros campos inválidos */
+input:invalid{
+    background-color:rgb(221, 122, 122);
+  }
+  
+  input:focus:invalid {
+    outline: none;
+  }
+  
+  /* Estos son los estilos para nuestros mensajes de error */
+  #errorNom, #errorApe, #errorMail, #errorTlf, #errorDir, #errorHora, #errorTarj, #errorNomTarj  {
+     
+    font-size: 80%;
+    color:red;
+    padding: 0.3em;
+    margin-left: 60px;
+  }
+  
+ .error{
+     background-color: rgb(221, 122, 122);
+ }
